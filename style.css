@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    list-style: none;
+}
+
+:root {
+    --bg-color: #ccc;
+    --text-color: #fff;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumb {
+    background-color: #FFFFFF;
+    background-image: linear-gradient(135deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+    width: 300px;
+    height: 400px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.5s; 
+}
+
+.thumb .logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.thumb .product_name {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    color: #fff;
+}
+.thumb img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.infor_container {
+    width: 300px;
+    height: 400px;
+    background-color: #FFFFFF;
+    background-image: linear-gradient(0deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+    position: absolute;
+    transition: 0.5s;
+}
+
+.infor_container .product_name {
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.infor_container .infor_product {
+    position: absolute;
+    margin-top: 20px;
+    left: 20px;
+}
+
+.infor_container .infor_product li {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.infor_container .infor_product li span {
+    color: rgb(17, 17, 53);
+}
+.infor_container .product_price {
+    color: var(--text-color);
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
+    color: #e61010;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.infor_container .button {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.infor_container .button .button_items{
+    padding: 10px 20px;
+    color: var(--text-color);
+    background-color: #ed1f24;
+    border: none;
+    border-radius: 3px;
+    transition: 0.5s;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.infor_container .button .button_items:hover {
+    cursor: pointer;
+    color: #ed1f24;
+    border: 1px solid #ed1f24;
+    background-color: var(--text-color);
+}
+#card:hover .thumb {
+    transform: translateX(-150px);
+    transition-delay: 0.3s;  
+}
+
+#card:hover .infor_container {
+    transform: translateX(150px);
+    transition-delay: 0.3s; 
+}
